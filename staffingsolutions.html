@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innov8 Solutions Pty Ltd</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          transitionProperty: {
+            'height': 'height',
+            'spacing': 'margin, padding',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .section {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.6s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 text-white shadow-lg py-4 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" class="h-16 md:h-20 lg:h-24 mb-4 md:mb-0">
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden p-2 text-white" onclick="toggleMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a>
+      <a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a>
+
+      <!-- Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-sm md:text-base hover:text-yellow-300">
+          Services
+          <svg class="w-4 h-4 transform group-hover:rotate-180 transition duration-200" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.943l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-64 hidden group-hover:block z-50">
+          <li><a href="engineeringservices.html" class="block px-5 py-3 hover:bg-gray-100">Engineering Services</a></li>
+          <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise Data, Analytics & AI</a></li>
+          <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise SAAS</a></li>
+          <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Infrastructure and Cyber Security</a></li>
+        </ul>
+      </div>
+
+      <a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a>
+      <a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a>
+      <a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a>
+      <a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a>
+      <a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobileMenu" class="hidden md:hidden w-full bg-blue-600 text-white py-4">
+  <ul class="flex flex-col items-center gap-4">
+    <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+    <li><a href="domain.html" class="hover:text-yellow-300">Domain</a></li>
+    <li class="font-semibold">Services</li>
+    <li><a href="engineeringservices.html" class="hover:text-yellow-300">Engineering Services</a></li>
+    <li><a href="#" class="hover:text-yellow-300">Enterprise Data, Analytics & AI</a></li>
+    <li><a href="#" class="hover:text-yellow-300">Enterprise SAAS</a></li>
+    <li><a href="#" class="hover:text-yellow-300">Infrastructure and Cyber Security</a></li>
+    <li><a href="technologies.html" class="hover:text-yellow-300">Technologies</a></li>
+    <li><a href="casestudies.html" class="hover:text-yellow-300">Case Studies</a></li>
+    <li><a href="staffingsolutions.html" class="hover:text-yellow-300">Staffing Solutions</a></li>
+    <li><a href="testimonials.html" class="hover:text-yellow-300">Testimonials</a></li>
+    <li><a href="contact.html" class="hover:text-yellow-300">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<!-- Main Content with Gradient -->
+<main class="bg-gradient-to-br from-pink-600 to-purple-800 text-white">
+  <div class="container mx-auto px-4 md:px-6 py-12 space-y-8">
+
+    <section class="section bg-white bg-opacity-10 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-yellow-300 text-3xl font-semibold mb-4">About Innov8 Solutions</h2>
+      <p class="text-white/90">With deep industry knowledge and an expansive network of skilled professionals, we enable businesses to navigate the evolving tech landscape. We focus on delivering long-term value through lasting relationships and strategic staffing solutions tailored to your IT goals.</p>
+    </section>
+
+    <section class="section bg-white bg-opacity-10 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-yellow-300 text-3xl font-semibold mb-4">IT Consulting Services & Staffing Solutions</h2>
+      <ul class="list-disc pl-6 space-y-2 text-white/90">
+        <li>Digital Solutions</li>
+        <li>Analytics & AI</li>
+        <li>Data Management Services</li>
+        <li>Intelligent Automation & DevOps</li>
+        <li>Infrastructure & Cyber Security</li>
+        <li>ERP</li>
+        <li>CRM</li>
+        <li>ITES</li>
+      </ul>
+    </section>
+
+    <section class="section bg-white bg-opacity-10 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-yellow-300 text-3xl font-semibold mb-4">Industries We Serve</h2>
+      <ul class="list-disc pl-6 space-y-2 text-white/90">
+        <li>BFSI</li>
+        <li>Telecom</li>
+        <li>Healthcare</li>
+        <li>Retail</li>
+        <li>Renewable Energy</li>
+        <li>Aviation</li>
+        <li>Manufacturing</li>
+        <li>Construction</li>
+        <li>Mining</li>
+      </ul>
+    </section>
+
+    <section class="section bg-white bg-opacity-10 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-yellow-300 text-3xl font-semibold mb-4">Our Engagement Models</h2>
+      <ul class="list-disc pl-6 space-y-2 text-white/90">
+        <li>T&M (Onsite/Offshore)</li>
+        <li>Fixed Price (Onsite/Offshore)</li>
+      </ul>
+    </section>
+
+    <section class="section bg-white bg-opacity-10 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-yellow-300 text-3xl font-semibold mb-6">How We Deliver Talent</h2>
+      <div class="space-y-4">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Comprehensive Recruitment Strategy:</strong>
+          <span class="text-white/90"> We analyze market demand and craft targeted job descriptions to attract the right candidates.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Sourcing & Networking:</strong>
+          <span class="text-white/90"> Using talent pools, partnerships, and social platforms to find top professionals.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Screening & Assessment:</strong>
+          <span class="text-white/90"> Through resume filtering, structured interviews, and skill assessments.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Employer Branding:</strong>
+          <span class="text-white/90"> We help you present an attractive employer image across digital platforms.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Seamless Onboarding:</strong>
+          <span class="text-white/90"> We support integration and retention through onboarding, engagement, and training programs.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Tech-Driven Hiring:</strong>
+          <span class="text-white/90"> Advanced tools and analytics improve speed and quality of recruitment.</span>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl border-l-4 border-yellow-300 shadow-md hover:-translate-y-1 transition">
+          <strong class="text-yellow-200">Diversity & Inclusion:</strong>
+          <span class="text-white/90"> Promoting inclusive hiring practices through bias training and awareness.</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-purple-900 text-white py-6 text-center">
+  <div class="container mx-auto px-4">
+    <p>© 2023 Innov8 Solutions Pty Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+</script>
+</body>
+</html>

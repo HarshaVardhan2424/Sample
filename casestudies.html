@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Innov8 Solutions Pty Ltd - Engineering Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary-blue': '#004080',
+            'dark-blue': '#003060',
+            'light-blue': '#eaf2ff',
+            'hover-blue': '#d6e8ff',
+            'alt-blue': '#f0f8ff',
+            'alt-hover': '#e0f0ff',
+            'accent-yellow': '#ffcc00',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .divider {
+      height: 1px;
+      background: #e5e7eb;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body class="font-['Inter'] bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 text-white shadow-lg py-4 md:py-0 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between relative">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" class="h-16 md:h-20 lg:h-24 mb-4 md:mb-0">
+
+      <!-- Mobile menu button -->
+      <button class="lg:hidden flex items-center justify-center p-2 text-white" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="w-full md:w-auto">
+        <ul class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 hidden md:flex items-center">
+          <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+          <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+          <!-- Services with Dropdown -->
+          <li class="relative group">
+            <button class="flex items-center gap-1 text-sm md:text-base hover:text-yellow-300 focus:outline-none">
+              Services
+              <svg class="w-4 h-4 transform group-hover:rotate-180 transition duration-200" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.943l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-64 hidden group-hover:block z-50">
+              <li><a href="engineeringservices.html" class="block px-5 py-3 hover:bg-gray-100">Engineering Services</a></li>
+              <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise Data, Analytics & AI</a></li>
+              <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise SAAS</a></li>
+              <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Infrastructure and Cyber Security</a></li>
+            </ul>
+          </li>
+
+          <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+          <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+          <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Mobile Navigation Menu (hidden by default) -->
+  <nav id="mobileMenu" class="hidden lg:hidden w-full bg-blue-600 text-white py-4">
+    <ul class="flex flex-col items-center gap-4">
+      <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+      <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+      <!-- Services Dropdown (simple stacked links) -->
+      <li class="text-sm md:text-base font-semibold">Services</li>
+      <ul class="text-sm md:text-base space-y-1">
+        <li><a href="engineeringservices.html" class="hover:text-yellow-300">Engineering Services</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Enterprise Data, Analytics & AI</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Enterprise SAAS</a></li>
+        <li><a href="#" class="hover:text-yellow-300">Infrastructure and Cyber Security</a></li>
+      </ul>
+
+      <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+      <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+      <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+      <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+      <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="flex flex-col lg:flex-row h-auto lg:h-screen mb-4 font-sans">
+    <!-- Left Panel -->
+    <div class="bg-gradient-to-b from-purple-800 to-purple-900 text-white w-full lg:w-2/5 p-8 flex flex-col justify-between shadow-lg">
+      <div>
+        <div class="flex items-center mb-8">
+          <div class="bg-white rounded-full p-2 mr-4 shadow-md">
+            <img src="https://via.placeholder.com/32" alt="Logo" class="w-8 h-8">
+          </div>
+          <h1 class="text-xl font-bold">Engineering Services</h1>
+        </div>
+  
+        <div class="space-y-8">
+          <div>
+            <div class="border-2 border-white px-4 py-2 inline-block font-semibold rounded-md text-lg">Key Offerings</div>
+            <div class="ml-4 space-y-4 mt-4">
+              <p class="flex items-center text-lg">
+                <strong>Strategy & Advisory</strong>
+                <hr class="border-white w-2/3 mt-1">
+              </p>
+              <p class="flex items-center text-lg">
+                <strong>Experience Engineering</strong>
+                <hr class="border-white w-2/3 mt-1">
+              </p>
+              <p class="flex items-center text-lg">
+                <strong>Application Development</strong>
+                <hr class="border-white w-2/3 mt-1">
+              </p>
+              <p class="flex items-center text-lg">
+                <strong>Application Support & Maintenance</strong>
+                <hr class="border-white w-2/3 mt-1">
+              </p>
+              <p class="flex items-center text-lg">
+                <strong>Quality Assurance</strong>
+                <hr class="border-white w-2/3 mt-1">
+              </p>
+              <p class="flex items-center text-lg">
+                <strong>Modernization</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Panel -->
+    <div class="bg-white w-full lg:w-3/5 p-8 relative overflow-y-auto rounded-lg shadow-lg">
+      <h3 class="font-bold text-lg text-purple-800 mb-6">Success Stories</h3>
+  
+      <div class="space-y-8">
+        <!-- Success Stories -->
+        <div class="use-case p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 flex items-center text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Legacy System Modernization
+          </h4>
+          <p class="ml-8 text-gray-700 text-lg">Re-engineered a legacy mainframe-based application for a global insurance provider by migrating to a microservices architecture on AWS, improving scalability and reducing costs by 40%.</p>
+        </div>
+  
+        <div class="use-case p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 flex items-center text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Omni-channel Banking Experience
+          </h4>
+          <p class="ml-8 text-gray-700 text-lg">Developed and deployed a responsive banking platform enabling seamless customer experience across mobile, web, and tablet interfaces, reducing onboarding time by 30%.</p>
+        </div>
+  
+        <div class="use-case p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 flex items-center text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Test Automation for Retail Giant
+          </h4>
+          <p class="ml-8 text-gray-700 text-lg">Implemented Selenium and Jenkins for end-to-end automation in a large-scale retail platform, resulting in 70% faster regression testing and improved product quality.</p>
+        </div>
+  
+        <div class="use-case p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 flex items-center text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Cloud-Native Application for Fintech Startup
+          </h4>
+          <p class="ml-8 text-gray-700 text-lg">Built a cloud-native loan management system using Azure DevOps, Kubernetes, and microservices, enabling continuous integration and faster time-to-market.</p>
+        </div>
+  
+        <div class="use-case p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 flex items-center text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            DevOps Strategy for Telecom Enterprise
+          </h4>
+          <p class="ml-8 text-gray-700 text-lg">Designed and executed a DevOps pipeline using Jenkins and Azure for a telecom enterprise, enhancing release velocity and reducing downtime by 60%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="flex flex-col lg:flex-row min-h-screen font-sans mb-4">
+    <!-- Left Panel -->
+    <div class="bg-gradient-to-b from-purple-800 to-purple-900 text-white w-full lg:w-2/5 p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+      <div>
+        <div class="flex items-center mb-8">
+          <div class="bg-white rounded-full p-2 mr-4 shadow-md">
+            <img src="https://via.placeholder.com/32" alt="Logo" class="w-8 h-8">
+          </div>
+          <h1 class="text-xl font-bold">Enterprise Data, Analytics & AI</h1>
+        </div>
+  
+        <div class="space-y-8">
+          <div>
+            <div class="border-2 border-white px-4 py-2 inline-block font-semibold rounded-md text-lg">Key Offerings</div>
+            <div class="ml-2 sm:ml-4 space-y-4 mt-4">
+              <p class="flex flex-col sm:flex-row sm:items-center text-lg">
+                <strong>Data Strategy & Governance</strong>
+                <hr class="border-white sm:w-2/3 mt-1 sm:ml-2">
+              </p>
+              <p class="flex flex-col sm:flex-row sm:items-center text-lg">
+                <strong>Data Engineering & Analytics</strong>
+                <hr class="border-white sm:w-2/3 mt-1 sm:ml-2">
+              </p>
+              <p class="flex flex-col sm:flex-row sm:items-center text-lg">
+                <strong>Data Visualization</strong>
+                <hr class="border-white sm:w-2/3 mt-1 sm:ml-2">
+              </p>
+              <p class="flex flex-col sm:flex-row sm:items-center text-lg">
+                <strong>AI/ML Ops</strong>
+                <hr class="border-white sm:w-2/3 mt-1 sm:ml-2">
+              </p>
+              <p class="flex flex-col sm:flex-row sm:items-center text-lg">
+                <strong>Robotic Process Automation</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Panel -->
+    <div class="bg-white w-full lg:w-3/5 p-6 sm:p-8 overflow-y-auto shadow-lg">
+      <h3 class="font-bold text-lg text-purple-800 mb-6">Success Stories</h3>
+  
+      <div class="space-y-8">
+        <!-- Use Case 1 -->
+        <div class="use-case p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-xl mb-2">Data Modernization for a Global Retailer</h4>
+          <p class="text-gray-700">
+            Migrated legacy data systems to a modern cloud-based data warehouse enabling real-time insights across inventory, sales, and customer behavior. Reduced reporting time by 60% and improved data accuracy by 40%.
+          </p>
+        </div>
+  
+        <!-- Use Case 2 -->
+        <div class="use-case p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-xl mb-2">AI-Powered Customer Segmentation</h4>
+          <p class="text-gray-700">
+            Developed an AI/ML model for a leading insurance provider to identify customer segments and predict churn. The model increased customer retention by 15% and drove targeted marketing campaigns with 3x conversion.
+          </p>
+        </div>
+  
+        <!-- Use Case 3 -->
+        <div class="use-case p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-xl mb-2">Robotic Process Automation for Finance Operations</h4>
+          <p class="text-gray-700">
+            Automated invoice reconciliation and financial reporting processes for a BFSI client using RPA, reducing manual effort by 80% and achieving 99.5% process accuracy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="flex flex-col lg:flex-row h-auto min-h-screen font-sans mb-4">
+    <!-- Left Panel -->
+    <div class="bg-gradient-to-b from-purple-800 to-purple-900 text-white w-full lg:w-2/5 p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+      <div>
+        <div class="flex items-center mb-6 sm:mb-8">
+          <div class="bg-white rounded-full p-2 mr-3 sm:mr-4 shadow-md">
+            <img src="https://via.placeholder.com/32" alt="Logo" class="w-8 h-8">
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold">Enterprise SAAS</h1>
+        </div>
+  
+        <div class="space-y-6 sm:space-y-8">
+          <div>
+            <div class="border-2 border-white px-3 sm:px-4 py-2 inline-block font-semibold rounded-md text-md sm:text-lg">Key Offerings</div>
+            <div class="ml-2 sm:ml-4 space-y-3 sm:space-y-4 mt-4 text-sm sm:text-base">
+              <p class="flex items-center">
+                <strong>Assessment & Selection</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Implementation and Configuration</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Support & Maintenance</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Integration Services</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p>
+                <strong>Optimization & Enhancements</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Panel -->
+    <div class="bg-white w-full lg:w-3/5 p-4 sm:p-8 overflow-y-auto rounded-lg shadow-lg">
+      <h3 class="font-bold text-base sm:text-lg text-purple-800 mb-4 sm:mb-6">Success Stories</h3>
+  
+      <div class="space-y-6 sm:space-y-8 text-sm sm:text-base">
+        <!-- Use Case 1 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">End-to-End SaaS Implementation for HRMS</h4>
+          <p class="text-gray-700">
+            Successfully implemented a cloud-based Human Resource Management System (HRMS) for a multinational manufacturing company. The project covered vendor assessment, solution selection, system configuration, user training, and post-launch support. Resulted in 35% improved HR process efficiency and 50% faster onboarding.
+          </p>
+        </div>
+  
+        <!-- Use Case 2 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">Seamless Integration of CRM & ERP Platforms</h4>
+          <p class="text-gray-700">
+            Integrated Salesforce CRM with SAP ERP for a logistics provider, enabling real-time data sync between sales, inventory, and billing. Reduced manual data entry errors by 70% and improved customer response times by 40%.
+          </p>
+        </div>
+  
+        <!-- Use Case 3 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">SaaS Optimization for Finance Suite</h4>
+          <p class="text-gray-700">
+            Conducted a system audit and optimization for a leading fintech firm using NetSuite. Implemented workflow enhancements and custom reports which improved financial close time by 45% and boosted overall platform adoption across departments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="flex flex-col lg:flex-row h-auto min-h-screen font-sans mb-4">
+    <!-- Left Panel -->
+    <div class="bg-gradient-to-b from-purple-800 to-purple-900 text-white w-full lg:w-2/5 p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+      <div>
+        <div class="flex items-center mb-6 sm:mb-8">
+          <div class="bg-white rounded-full p-2 mr-3 sm:mr-4 shadow-md">
+            <img src="https://via.placeholder.com/32" alt="Logo" class="w-8 h-8">
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold leading-snug">Infrastructure & Cyber Security</h1>
+        </div>
+  
+        <div class="space-y-6 sm:space-y-8">
+          <div>
+            <div class="border-2 border-white px-3 sm:px-4 py-2 inline-block font-semibold rounded-md text-md sm:text-lg">Key Offerings</div>
+            <div class="ml-2 sm:ml-4 space-y-3 sm:space-y-4 mt-4 text-sm sm:text-base">
+              <p class="flex items-center">
+                <strong>Cloud Services: FinOps</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Infrastructure Support Services</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Cyber Security Services</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p class="flex items-center">
+                <strong>Governance, Risk & Compliance (GRC)</strong>
+                <hr class="border-white w-2/3 ml-2">
+              </p>
+              <p>
+                <strong>Employee Experience: ITES</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Panel -->
+    <div class="bg-white w-full lg:w-3/5 p-4 sm:p-8 overflow-y-auto rounded-lg shadow-lg">
+      <h3 class="font-bold text-base sm:text-lg text-purple-800 mb-4 sm:mb-6">Success Stories</h3>
+  
+      <div class="space-y-6 sm:space-y-8 text-sm sm:text-base">
+        <!-- Use Case 1 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">Cloud Cost Optimization for Global Tech Firm</h4>
+          <p class="text-gray-700">
+            Delivered FinOps strategy for a global SaaS company resulting in a 30% reduction in AWS and Azure cloud spend. Implemented automated monitoring, budget alerts, and right-sizing policies.
+          </p>
+        </div>
+  
+        <!-- Use Case 2 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">24/7 Infrastructure Support for BFSI Client</h4>
+          <p class="text-gray-700">
+            Established a centralized support center managing 2,000+ assets. Achieved 99.9% uptime and reduced MTTR by 45% for a leading bank.
+          </p>
+        </div>
+  
+        <!-- Use Case 3 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">Cybersecurity Hardening for Healthcare Provider</h4>
+          <p class="text-gray-700">
+            Performed vulnerability assessment and implemented SIEM with Zero Trust access, reducing critical threats by 80%.
+          </p>
+        </div>
+  
+        <!-- Use Case 4 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">GRC Automation for Compliance Management</h4>
+          <p class="text-gray-700">
+            Automated risk and compliance workflows for an insurer, reducing audit prep time by 60% with real-time dashboards.
+          </p>
+        </div>
+  
+        <!-- Use Case 5 -->
+        <div class="p-4 sm:p-6 hover:bg-gray-50 rounded-lg transition-all shadow-md">
+          <h4 class="font-semibold text-purple-700 text-lg sm:text-xl mb-2">Employee Experience Platform for BPO Workforce</h4>
+          <p class="text-gray-700">
+            Delivered a digital workspace for 10,000+ employees, boosting satisfaction scores by 25% and cutting support tickets by 40%.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-4 text-center">
+    <p class="text-sm md:text-base">© 2023 Innov8 Solutions Pty Ltd. All rights reserved.</p>
+  </footer>
+</body>
+</html>

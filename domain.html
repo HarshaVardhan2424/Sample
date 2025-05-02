@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innov8 Solutions Pty Ltd - Domains</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // JavaScript to toggle the menu on mobile
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary-blue': '#004080',
+            'dark-blue': '#003060',
+            'light-blue': '#eaf2ff',
+            'hover-blue': '#d6e8ff',
+            'primary-yellow': '#ffcc00',
+            'hover-yellow': '#e6b800',
+          },
+          backgroundImage: {
+            'gradient-body': 'linear-gradient(to right, #cce7ff, #e6f7ff)',
+          }
+        }
+      }
+    }
+  </script>
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 text-white shadow-lg py-4 md:py-0 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between relative">
+    <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" class="h-16 md:h-20 lg:h-24 mb-4 md:mb-0">
+
+    <!-- Mobile menu button -->
+    <button class="lg:hidden flex items-center justify-center p-2 text-white" onclick="toggleMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="w-full md:w-auto">
+      <ul class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 hidden md:flex items-center">
+        <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+        <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+        <!-- Services with Dropdown -->
+        <li class="relative group">
+          <button class="flex items-center gap-1 text-sm md:text-base hover:text-yellow-300 focus:outline-none">
+            Services
+            <svg class="w-4 h-4 transform group-hover:rotate-180 transition duration-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.943l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-64 hidden group-hover:block z-50">
+            <li><a href="engineeringservices.html" class="block px-5 py-3 hover:bg-gray-100">Engineering Services</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise Data, Analytics & AI</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise SAAS</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Infrastructure and Cyber Security</a></li>
+          </ul>
+        </li>
+
+        <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+        <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+        <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+        <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Mobile Navigation Menu (hidden by default) -->
+<nav id="mobileMenu" class="hidden lg:hidden w-full bg-blue-600 text-white py-4">
+  <ul class="flex flex-col items-center gap-4">
+    <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+    <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+    <!-- Services Dropdown (simple stacked links) -->
+    <li class="text-sm md:text-base font-semibold">Services</li>
+    <ul class="text-sm md:text-base space-y-1">
+      <li><a href="#" class="hover:text-yellow-300">Engineering Services</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Enterprise Data, Analytics & AI</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Enterprise SAAS</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Infrastructure and Cyber Security</a></li>
+    </ul>
+
+    <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+    <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+    <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+    <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+    <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Main Content -->
+  <section class="container mx-auto px-4 md:px-6 py-8 md:py-12">
+    <!-- BFSI Domain -->
+    <div class="flex flex-col lg:flex-row items-center bg-gradient-to-r from-white/70 via-pink-500 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743506952/bfsi-banking-financial-services-insurance-600nw-2431710477_j7wpm2.webp" alt="BFSI" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">BFSI (Banking, Financial Services, and Insurance)</h2>
+        <p class="text-gray-600">We deliver end-to-end IT solutions tailored specifically for the BFSI sector, empowering institutions to drive innovation, enhance security, and ensure compliance. Our expertise spans across core banking systems, digital payment platforms, and insurance technologies. Key service areas include advanced risk management frameworks, AI-powered fraud detection systems, real-time transaction monitoring, regulatory reporting, and robust customer data protection strategies. We help financial organizations modernize legacy systems, improve customer experience, and stay ahead in an increasingly digital and regulated environment.</p>
+      </div>
+    </div>
+
+    <!-- Telecom Domain -->
+    <div class="flex flex-col lg:flex-row-reverse items-center bg-gradient-to-r from-purple-800 via-white/70 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507045/istockphoto-1306156001-612x612_jt1qez.jpg" alt="Telecom" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-black">Telecom</h2>
+        <p class="text-black-100">We offer cutting-edge IT and communication technology solutions designed to meet the evolving needs of the telecom industry. Our services focus on enhancing network efficiency, ensuring high availability, and delivering exceptional customer experiences. Key offerings include intelligent network optimization, scalable VoIP (Voice over IP) systems, real-time analytics, and comprehensive customer relationship management (CRM) platforms. We also support telecom providers in infrastructure modernization, 5G readiness, and seamless integration of emerging technologies. Our solutions empower telecom operators to reduce operational costs, increase service reliability, and drive business growth in a highly competitive market..</p>
+      </div>
+    </div>
+
+    <!-- Healthcare Domain -->
+    <div class="flex flex-col lg:flex-row items-center  bg-gradient-to-r from-white/70 via-pink-500 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507165/medical-banner-with-stethoscope_23-2149611199_ri4xqk.avif" alt="Healthcare" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Healthcare</h2>
+        <p class="text-gray-600">We deliver innovative IT solutions that transform the healthcare landscape by enhancing patient care, streamlining operations, and improving clinical outcomes. Our services include seamless Electronic Health Records (EHR) integration, secure and scalable telemedicine platforms, and advanced medical data analytics for informed decision-making. We specialize in interoperability, HIPAA-compliant data management, and real-time monitoring systems to support healthcare providers in offering efficient, personalized care. From hospital management systems to patient engagement tools, our solutions empower healthcare institutions to modernize their infrastructure, reduce administrative burdens, and prioritize patient well-being.</p>
+      </div>
+    </div>
+
+    <!-- Retail Domain -->
+    <div class="flex flex-col lg:flex-row-reverse items-center bg-gradient-to-r from-purple-800 via-white/70 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507297/pngtree-digital-retailing-illustration-laptop-keyboard-with-shopping-basket-and-e-commerce-image_3903657_xpnkcm.jpg" alt="Retail" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Retail</h2>
+        <p class="text-black-100">We drive digital transformation in the retail industry by delivering innovative IT solutions that enhance customer engagement, streamline operations, and boost sales performance. Our offerings include feature-rich e-commerce platforms, real-time inventory and supply chain management systems, and AI-powered personalized shopping experiences. From omnichannel integration and mobile retail apps to customer behavior analytics and loyalty program solutions, we help retailers create seamless, data-driven experiences across digital and physical touchpoints. Our goal is to empower retail businesses to adapt quickly to market trends, optimize resources, and build lasting customer relationships in a competitive landscape.</p>
+      </div>
+    </div>
+
+    <!-- Renewable Energy Domain -->
+    <div class="flex flex-col lg:flex-row items-center  bg-gradient-to-r from-white/70 via-pink-500 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507407/360_F_554514065_A5Y17mmaZgxkbcKri1g52RrLDtLzOU54_bbjpjw.jpg" alt="Renewable Energy" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Renewable Energy</h2>
+        <p class="text-gray-600">We provide advanced technology solutions to accelerate the growth of sustainable and green energy initiatives. Our services support the entire lifecycle of renewable energy projects, from generation and distribution to monitoring and optimization. Key offerings include smart grid analytics for efficient energy flow, AI-driven energy demand forecasting, and IoT-enabled monitoring systems for real-time performance tracking of solar, wind, and hydro power assets. We also assist in predictive maintenance, regulatory compliance, and integration with traditional energy systems to ensure a smooth transition to clean energy. By leveraging data and automation, we help energy providers maximize output, minimize waste, and contribute to a more sustainable future.</p>
+      </div>
+    </div>
+
+    <!-- Aviation Domain -->
+    <div class="flex flex-col lg:flex-row-reverse items-center bg-gradient-to-r from-purple-800 via-white/70 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507501/sky-airplane-airline-airbus-wallpaper-preview_yy6p1l.jpg" alt="Aviation" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Aviation</h2>
+        <p class="text-black-100">We deliver IT-driven solutions tailored to enhance efficiency, safety, and passenger satisfaction across the aviation industry. Our expertise supports both airline and airport operations, with services that include intelligent flight scheduling systems, end-to-end passenger management platforms, and predictive maintenance tracking tools. We enable seamless integration of operational data, real-time communication, and advanced analytics to optimize resource allocation, reduce delays, and improve overall service quality. From ground operations to in-flight connectivity, our technology empowers aviation stakeholders to modernize their infrastructure, comply with global regulations, and elevate the travel experience.</p>
+      </div>
+    </div>
+
+    <!-- Manufacturing Domain -->
+    <div class="flex flex-col lg:flex-row items-center  bg-gradient-to-r from-white/70 via-pink-500 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507857/istockphoto-1367617035-612x612_phllen.jpg" alt="Manufacturing" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Manufacturing</h2>
+        <p class="text-gray-600">We enable digital transformation in the manufacturing sector through innovative IT and automation solutions that drive productivity, efficiency, and cost-effectiveness. Our services encompass predictive maintenance powered by AI and machine learning, seamless IoT integration for real-time equipment monitoring, and intelligent supply chain management systems to streamline operations. We help manufacturers modernize legacy systems, implement smart factory concepts, and achieve greater visibility across production lines. From process automation and quality control to data-driven decision-making, our solutions empower manufacturers to stay competitive in an increasingly connected and fast-paced industrial landscape.</p>
+      </div>
+    </div>
+
+    <!-- Construction Domain -->
+    <div class="flex flex-col lg:flex-row-reverse items-center bg-gradient-to-r from-purple-800 via-white/70 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743507937/depositphotos_93401314-stock-photo-concept-of-construction-and-design_npzgct.webp" alt="Construction" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Construction</h2>
+        <p class="text-black-100">We provide smart IT solutions that revolutionize construction and infrastructure development by enhancing project visibility, efficiency, and safety. Our offerings include advanced project management software for real-time collaboration and progress tracking, Building Information Modeling (BIM) solutions for seamless planning and design integration, and AI-driven site monitoring tools for risk detection, safety compliance, and productivity analysis. We support construction firms in digitizing workflows, optimizing resource allocation, and ensuring on-time, within-budget delivery. From pre-construction planning to post-project analytics, our technology empowers teams to build smarter, safer, and more sustainably in today’s fast-evolving construction landscape.</p>
+      </div>
+    </div>
+
+    <!-- Mining Domain -->
+    <div class="flex flex-col lg:flex-row items-center  bg-gradient-to-r from-white/70 via-pink-500 rounded-xl shadow-md overflow-hidden mb-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743508048/istockphoto-1369942023-612x612_biha79.jpg" alt="Mining" class="w-full lg:w-1/2 h-64 lg:h-96 object-cover">
+      <div class="w-full lg:w-1/2 p-6 md:p-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-dark-blue">Mining</h2>
+        <p class="text-gray-600">We empower the mining industry with cutting-edge IT solutions that optimize operations, enhance safety, and drive productivity. Our services include real-time asset tracking systems for efficient equipment utilization, advanced geological data analysis to support exploration and resource planning, and automated safety monitoring powered by IoT and AI to ensure compliance and reduce risk. We also offer integrated platforms for fleet management, environmental impact monitoring, and predictive maintenance to minimize downtime and operational costs. By digitizing and automating critical processes, we help mining companies achieve greater operational efficiency, sustainability, and long-term profitability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white py-6 text-center">
+    <div class="container mx-auto px-4">
+      <p class="text-sm md:text-base">© 2025 Innov8 Solutions Pty Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
