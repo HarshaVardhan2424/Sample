@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Innov8 Solutions Pty Ltd - IT Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary-yellow': '#ffcc00',
+            'hover-yellow': '#e6b800',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+</head>
+
+<body class="font-['Inter'] bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 text-white shadow-lg py-4 md:py-0 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between relative">
+    <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" class="h-16 md:h-20 lg:h-24 mb-4 md:mb-0">
+    <button class="lg:hidden flex items-center justify-center p-2 text-white" onclick="toggleMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <nav class="w-full md:w-auto">
+      <ul class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 hidden md:flex items-center">
+        <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+        <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+        <li class="relative group">
+          <button class="flex items-center gap-1 text-sm md:text-base hover:text-yellow-300 focus:outline-none">
+            Services
+            <svg class="w-4 h-4 transform group-hover:rotate-180 transition duration-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.943l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-64 hidden group-hover:block z-50">
+            <li><a href="engineeringservices.html" class="block px-5 py-3 hover:bg-gray-100">Engineering Services</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise Data, Analytics & AI</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Enterprise SAAS</a></li>
+            <li><a href="#" class="block px-5 py-3 hover:bg-gray-100">Infrastructure and Cyber Security</a></li>
+          </ul>
+        </li>
+        <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+        <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+        <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+        <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<nav id="mobileMenu" class="hidden lg:hidden w-full bg-pink-600 text-white py-4">
+  <ul class="flex flex-col items-center gap-4">
+    <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+    <li><a href="domain.html" class="hover:text-yellow-300">Domain</a></li>
+    <li class="font-semibold">Services</li>
+    <ul class="space-y-1">
+      <li><a href="#" class="hover:text-yellow-300">Engineering Services</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Enterprise Data, Analytics & AI</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Enterprise SAAS</a></li>
+      <li><a href="#" class="hover:text-yellow-300">Infrastructure and Cyber Security</a></li>
+    </ul>
+    <li><a href="technologies.html" class="hover:text-yellow-300">Technologies</a></li>
+    <li><a href="casestudies.html" class="hover:text-yellow-300">Case Studies</a></li>
+    <li><a href="staffingsolutions.html" class="hover:text-yellow-300">Staffing Solutions</a></li>
+    <li><a href="testimonials.html" class="hover:text-yellow-300">Testimonials</a></li>
+    <li><a href="contact.html" class="hover:text-yellow-300">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<main>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-pink-600 via-purple-700 to-pink-800 bg-cover bg-center h-96 flex items-center justify-center text-center text-white px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Empowering Businesses with IT Solutions</h1>
+      <p class="text-lg md:text-xl mb-6">Strategic IT consulting, staffing, and customized solutions to drive success.</p>
+      <a href="#services" class="bg-white text-purple-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 inline-block">
+        Explore Services
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-r from-pink-50 via-purple-100 to-pink-50">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-purple-900 mb-12">What We Do</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold mb-3 text-purple-800">Staffing Solutions</h3>
+          <p class="text-gray-700">Connecting organizations with top-tier IT professionals for short-term and long-term roles.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold mb-3 text-purple-800">IT Consulting</h3>
+          <p class="text-gray-700">Providing strategic guidance for IT application development, infrastructure, and digital transformation.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2">
+          <h3 class="text-xl font-semibold mb-3 text-purple-800">Customized Solutions</h3>
+          <p class="text-gray-700">Implementing new technologies, enhancing systems, and finding the right talent tailored to your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="py-12 md:py-16 px-4 md:px-8 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Expertise in IT Consulting & Staffing</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">Digital Solutions</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">Analytics & AI</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">Data Management</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">Automation & DevOps</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">Infrastructure & Security</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">ERP</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">CRM</h3></div>
+        <div class="bg-white text-purple-900 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105"><h3 class="font-semibold text-center">ITES</h3></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-purple-700 to-pink-600 text-white py-6 text-center">
+  <div class="container mx-auto px-4">
+    <p class="text-sm md:text-base">© 2023 Innov8 Solutions Pty Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

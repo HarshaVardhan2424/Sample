@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innov8 Solutions Pty Ltd - IT Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // JavaScript to toggle the menu on mobile
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            'primary-blue': '#004080',
+            'dark-blue': '#003060',
+            'light-blue': '#eaf2ff',
+            'hover-blue': '#d6e8ff',
+            'primary-yellow': '#ffcc00',
+            'hover-yellow': '#e6b800',
+          },
+          backgroundImage: {
+            'gradient-body': 'linear-gradient(to right, #cce7ff, #e6f7ff)',
+            'hero-pattern': "url('https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743169663/the-role_or2gv6.jpg')"
+          },
+          animation: {
+            'fade-in': 'fadeIn 1s ease-in-out',
+            'scroll': 'scroll 30s linear infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              'from': { opacity: '0', transform: 'translateY(20px)' },
+              'to': { opacity: '1', transform: 'translateY(0)' }
+            },
+            scroll: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+<body class="font-['Inter'] bg-gray-50 text-gray-800">
+  <!-- Header -->
+
+ 
+<!-- Header -->
+<header class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 text-white shadow-lg py-4 md:py-0 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between relative">
+    <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" class="h-16 md:h-20 lg:h-24 mb-4 md:mb-0">
+
+    <!-- Mobile menu button -->
+    <button class="lg:hidden flex items-center justify-center p-2 text-white" onclick="toggleMenu()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav class="w-full md:w-auto">
+      <ul class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6 hidden md:flex items-center">
+        <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+        <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+        <!-- Services with Dropdown -->
+        <li class="relative group">
+          <button class="flex items-center gap-1 text-sm md:text-base hover:text-yellow-300 focus:outline-none">
+            Services
+            <svg class="w-4 h-4 transform group-hover:rotate-180 transition duration-200" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.943l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <ul class="absolute left-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-64 hidden group-hover:block z-50">
+            <li><a href="engineeringservices.html" class="block px-5 py-3 hover:bg-gray-100">Engineering Services</a></li>
+            <li><a href="enterprise.html" class="block px-5 py-3 hover:bg-gray-100">Enterprise Data, Analytics & AI</a></li>
+            <li><a href="saas.html" class="block px-5 py-3 hover:bg-gray-100">Enterprise SAAS</a></li>
+            <li><a href="infrastructure.html" class="block px-5 py-3 hover:bg-gray-100">Infrastructure and Cyber Security</a></li>
+          </ul>
+        </li>
+
+        <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+        <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+        <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+        <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Mobile Navigation Menu (hidden by default) -->
+<nav id="mobileMenu" class="hidden lg:hidden w-full bg-blue-600 text-white py-4">
+  <ul class="flex flex-col items-center gap-4">
+    <li><a href="index.html" class="hover:text-yellow-300 text-sm md:text-base">Home</a></li>
+    <li><a href="domain.html" class="hover:text-yellow-300 text-sm md:text-base">Domain</a></li>
+
+    <!-- Services Dropdown (simple stacked links) -->
+    <li class="text-sm md:text-base font-semibold">Services</li>
+    <ul class="text-sm md:text-base space-y-1">
+      <li><a href="engineeringservices.html" class="hover:text-yellow-300">Engineering Services</a></li>
+      <li><a href="enterprise.html" class="hover:text-yellow-300">Enterprise Data, Analytics & AI</a></li>
+      <li><a href="saas.html" class="hover:text-yellow-300">Enterprise SAAS</a></li>
+      <li><a href="infrastructure.html" class="hover:text-yellow-300">Infrastructure and Cyber Security</a></li>
+    </ul>
+
+    <li><a href="technologies.html" class="hover:text-yellow-300 text-sm md:text-base">Technologies</a></li>
+    <li><a href="casestudies.html" class="hover:text-yellow-300 text-sm md:text-base">Case Studies</a></li>
+    <li><a href="staffingsolutions.html" class="hover:text-yellow-300 text-sm md:text-base">Staffing Solutions</a></li>
+    <li><a href="testimonials.html" class="hover:text-yellow-300 text-sm md:text-base">Testimonials</a></li>
+    <li><a href="contact.html" class="hover:text-yellow-300 text-sm md:text-base">Contact Us</a></li>
+  </ul>
+</nav>
+  <!-- Main Content -->
+  <main>
+   <!-- Hero Section -->
+<section class="bg-hero-pattern bg-cover bg-center h-[80vh] flex items-center justify-start text-left px-5 text-white
+">
+  <div class="max-w-2xl pl-4 md:pl-12">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">IT Consulting & Staffing Solutions Experts</h1>
+    <p class="text-lg md:text-xl mb-6">Delivering Tailored Technology Strategies & Top Talent to Drive Business Success.</p>
+  </div>
+</section>
+
+    
+
+    <!-- Who We Are Section -->
+    <section class="bg-white text-black py-16 px-6">
+      <div class="max-w-7xl mx-auto lg:flex">
+        <!-- Left Side - Fixed Content -->
+        <div class="lg:w-1/3 lg:sticky top-10 self-start">
+          <h3 class="text-primary-yellow font-semibold text-sm uppercase">WHO WE ARE</h3>
+          <h2 class="text-3xl md:text-4xl font-bold text-black mt-2">
+            IT Consulting & <br> Staffing Solutions
+          </h2>
+          <p class="text-gray-600 mt-4">
+            Connecting businesses with the right technology solutions and top-tier talent to drive growth, innovation, and operational success.
+          </p>
+
+          <div class="bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800 shadow-md rounded-lg p-6 mt-6">
+            <h3 class="text-lg font-bold">
+              Empower Your <span class="text-primary-yellow">IT Strategy</span>
+            </h3>
+            <p class="text-gray-600 mt-2">
+              With years of expertise, we help organizations navigate complex IT landscapes by delivering tailored solutions and exceptional staffing support.
+            </p>
+            <button class="mt-4 bg-primary-yellow text-white px-6 py-2 rounded-md shadow-md hover:bg-hover-yellow transition duration-300">
+              CONTACT US →
+            </button>
+          </div>
+        </div>
+
+       <!-- Right Side - Scrollable Content -->
+<div class="lg:w-2/3 lg:ml-6 mt-8 lg:mt-0">
+  <!-- IT Strategy Card -->
+  <div class="bg-gradient-to-r from-white/70 via-pink-500/70 to-white/70 shadow-md rounded-lg p-6 mb-6 transition-all duration-300 hover:-translate-y-1">
+    <h3 class="font-bold text-xl flex items-center">
+      <span class="text-primary-yellow text-2xl mr-2">🚀</span> IT Strategy & Consulting
+    </h3>
+    <p class="text-gray-600 mt-2">
+      Crafting technology roadmaps that align with your business objectives.
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4 text-gray-700">
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Digital Transformation</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> IT Roadmap Development</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> IT Infrastructure Consulting</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Enterprise Architecture</li>
+    </ul>
+  </div>
+
+  <!-- Staffing Card -->
+  <div class="bg-gradient-to-r from-white/70 via-purple-800 to-white/70 text-white shadow-md rounded-lg p-6 mb-6 transition-all duration-300 hover:-translate-y-1">
+    <h3 class="font-bold text-xl flex items-center">
+      <span class="text-white text-2xl mr-2">🧑‍💻</span> IT Staffing & Talent Acquisition
+    </h3>
+    <p class="mt-2">
+      Providing skilled professionals to meet your technology staffing needs.
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Permanent Placement</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Contract Staffing</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Managed IT Services</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Executive IT Recruitment</li>
+    </ul>
+  </div>
+
+  <!-- Cloud Services Card -->
+  <div class="bg-gradient-to-r from-white/70 via-pink-500 to-white/70 shadow-md rounded-lg p-6 mb-6 transition-all duration-300 hover:-translate-y-1">
+    <h3 class="font-bold text-xl flex items-center">
+      <span class="text-primary-yellow text-2xl mr-2">☁️</span> Cloud & Infrastructure Services
+    </h3>
+    <p class="text-gray-600 mt-2">
+      Optimizing cloud and IT infrastructure for seamless operations.
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4 text-gray-700">
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Cloud Migration</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> DevOps & Automation</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> IT Support & Maintenance</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Security & Compliance</li>
+    </ul>
+  </div>
+
+  <!-- Data Analytics Card -->
+  <div class="bg-gradient-to-r from-white/70 via-purple-800 to-white/70 text-white shadow-md rounded-lg p-6 mb-6 transition-all duration-300 hover:-translate-y-1">
+    <h3 class="font-bold text-xl flex items-center">
+      <span class="text-white text-2xl mr-2">📊</span> Data & Analytics
+    </h3>
+    <p class="mt-2">
+      Turning data into actionable insights for business intelligence.
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Data Engineering</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Business Intelligence</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> AI & Machine Learning</li>
+      <li class="flex items-center"><span class="text-green-300 mr-2">✔</span> Predictive Analytics</li>
+    </ul>
+  </div>
+
+  <!-- Cybersecurity Card -->
+  <div class="bg-gradient-to-r from-white/70 via-pink-500 to-white/70 shadow-md rounded-lg p-6 mb-6 transition-all duration-300 hover:-translate-y-1">
+    <h3 class="font-bold text-xl flex items-center">
+      <span class="text-primary-yellow text-2xl mr-2">🔍</span> Cybersecurity & Risk Management
+    </h3>
+    <p class="text-gray-600 mt-2">
+      Protecting your business with top-tier security solutions.
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4 text-gray-700">
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Cybersecurity Assessments</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Risk & Compliance</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Incident Response</li>
+      <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Network Security</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="py-16 px-4 md:px-6 bg-gradient-to-r from-white/70 via-pink-500/70 to-purple-800">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-dark-blue mb-4">Empowering Businesses with IT Talent & Solutions</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">We provide expert staffing, strategic IT consulting, and customized solutions to drive innovation and efficiency.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Staffing Solutions -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">Staffing Solutions</h3>
+            <p class="text-gray-600">Connect with top-tier IT professionals for projects or long-term roles in software development, cloud computing, and more.</p>
+          </div>
+          
+          <!-- IT Consulting -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">IT Consulting</h3>
+            <p class="text-gray-600">Strategic guidance to optimize IT infrastructure, cybersecurity, and digital transformation for seamless business operations.</p>
+          </div>
+          
+          <!-- Custom IT Solutions -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">Custom IT Solutions</h3>
+            <p class="text-gray-600">Tailored services to implement new technologies, enhance systems, and align IT with business goals.</p>
+          </div>
+          
+          <!-- Cloud & Infrastructure -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">Cloud & Infrastructure</h3>
+            <p class="text-gray-600">Modernize your IT environment with cloud computing, network solutions, and managed services.</p>
+          </div>
+          
+          <!-- Cybersecurity -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">Cybersecurity</h3>
+            <p class="text-gray-600">Protect your business with advanced security solutions, risk assessments, and compliance strategies.</p>
+          </div>
+          
+          <!-- Project Management -->
+          <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl font-bold text-dark-blue mb-3">Project Management</h3>
+            <p class="text-gray-600">Ensure smooth IT project execution with structured planning, agile methodologies, and risk management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="py-16 px-4 md:px-8 bg-gradient-to-r from-purple-800 via-pink-500/70 to-white/70">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">
+          IT Consulting Services & Staffing Solutions
+        </h1>
+        <p class="text-lg text-white text-center max-w-3xl mx-auto mb-12">
+          We help businesses thrive with expert IT staffing, consulting, and innovative solutions tailored to evolving industry needs.
+        </p>
+        
+        <h2 class="text-2xl font-semibold text-center text-white uppercase tracking-wider mb-8">
+          Our Core Services
+        </h2>
+      </div>
+      
+        <div class="relative overflow-hidden">
+          <div class="flex gap-6 animate-scroll">
+            <!-- Digital Solutions -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743171962/istockphoto-1127257350-612x612_hkq3i6.jpg" 
+                   alt="Digital Solutions" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">Digital Solutions</h3>
+                <p class="text-sm text-gray-700">Transform your business with cutting-edge digital services.</p>
+              </div>
+            </div>
+            
+            <!-- Analytics & AI -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743172149/ai-data-analytics-scaled_kgqxoc.webp" 
+                   alt="Analytics & AI" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">Analytics & AI</h3>
+                <p class="text-sm text-gray-700">Leverage AI for smarter business insights.</p>
+              </div>
+            </div>
+            
+            <!-- Data Management -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743172349/dha-dm_yqc4u9.jpg" 
+                   alt="Data Management Services" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">Data Management Services</h3>
+                <p class="text-sm text-gray-700">Ensure data integrity and accessibility.</p>
+              </div>
+            </div>
+            
+            <!-- Intelligent Automation -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743172510/1689187161335_umuxub.jpg" 
+                   alt="Intelligent Automation & DevOps" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">Intelligent Automation & DevOps</h3>
+                <p class="text-sm text-gray-700">Streamline processes with automation.</p>
+              </div>
+            </div>
+            
+            <!-- Infrastructure & Security -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743174110/360_F_245636933_kY23ohGptK5t6n8wGSXIgLgVXWeHJRct_eoikuy.jpg" 
+                   alt="Infrastructure & Cyber Security" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">Infrastructure & Cyber Security</h3>
+                <p class="text-sm text-gray-700">Protect your digital assets from cyber threats.</p>
+              </div>
+            </div>
+            
+            <!-- ERP -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743172825/business-people-using-laptop-document-260nw-2450250997_r3ndzi.webp" 
+                   alt="ERP" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">ERP</h3>
+                <p class="text-sm text-gray-700">Optimize operations with enterprise solutions.</p>
+              </div>
+            </div>
+            
+            <!-- CRM -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743172992/businessman-show-crm-customer-relationship-600nw-2322768263_wfmkv3.webp" 
+                   alt="CRM" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">CRM</h3>
+                <p class="text-sm text-gray-700">Enhance customer relationships effectively.</p>
+              </div>
+            </div>
+            
+            <!-- ITES -->
+            <div class="min-w-[280px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743174515/ITES-Professional-services_ibrfik.jpg" 
+                   alt="ITES" 
+                   class="w-full h-48 object-cover border-b-4 border-blue-400">
+              <div class="absolute bottom-0 left-0 w-full bg-white/70 p-4 text-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <h3 class="font-bold text-dark-blue">ITES</h3>
+                <p class="text-sm text-gray-700">Innovative IT-enabled services for growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="bg-[#fdf7f0] text-black py-16 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
+        <!-- Left Side -->
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold text-black">Our Services</h2>
+          <p class="text-gray-700 mt-4">
+            With deep industry expertise and a network of top-tier professionals, we provide scalable IT consulting and staffing services to drive your business forward.
+          </p>
+
+          <!-- Tabs -->
+          <div class="flex space-x-3 mt-6 bg-white shadow-md rounded-lg p-2">
+            <button onclick="showTab('staffing')" class="tab-btn bg-primary-blue text-white px-4 py-2 rounded-md transition duration-300" id="btn-staffing">👨‍💻 Staffing</button>
+            <button onclick="showTab('consulting')" class="tab-btn text-gray-700 px-4 py-2 transition duration-300" id="btn-consulting">🧠 Consulting</button>
+            <button onclick="showTab('solutions')" class="tab-btn text-gray-700 px-4 py-2 transition duration-300" id="btn-solutions">🛠️ Solutions</button>
+          </div>
+
+          <!-- Content Blocks -->
+          <div id="staffing" class="tab-content mt-6">
+            <h3 class="text-2xl font-bold text-dark-blue">Staffing Solutions</h3>
+            <p class="text-gray-700 mt-2">
+              We connect organizations with top-tier IT professionals for both short-term projects and long-term roles. Our expertise covers software development, cloud computing, cybersecurity, and network engineering.
+            </p>
+          </div>
+
+          <div id="consulting" class="tab-content mt-6 hidden">
+            <h3 class="text-2xl font-bold text-dark-blue">IT Consulting</h3>
+            <p class="text-gray-700 mt-2">
+              We provide strategic guidance to optimize IT application development, infrastructure, cybersecurity, and digital transformation — ensuring scalability, security, and cost-effectiveness.
+            </p>
+          </div>
+
+          <div id="solutions" class="tab-content mt-6 hidden">
+            <h3 class="text-2xl font-bold text-dark-blue">Customized Solutions</h3>
+            <p class="text-gray-700 mt-2">
+              Whether implementing new technologies, improving current systems, or hiring talent, we tailor our services to your business challenges and goals.
+            </p>
+            <p class="text-gray-700 mt-4">
+              Our passion lies in helping businesses thrive in a fast-evolving tech landscape. Let's connect and explore how we can support your IT and staffing goals.
+            </p>
+          </div>
+
+          <a href="#" class="text-primary-blue font-semibold mt-6 inline-block hover:text-dark-blue transition duration-300">Let's Work Together →</a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="lg:w-1/2 flex justify-center relative mt-10 lg:mt-0">
+          <div class="relative">
+            <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743506629/hr-managers-interviewing-female-job-applicant-top-view-abo-recruiters-listen-to-candidate-answering-questions-hiring-117906852_gmae2i.webp" alt="Professional" class="rounded-lg shadow-lg w-full max-w-md" />
+            <div class="absolute top-4 right-4 bg-white p-2 shadow-lg rounded-md">
+              <p class="text-sm text-gray-500">Projects Completed</p>
+              <p class="text-xl font-bold text-primary-blue">3,258</p>
+            </div>
+            <div class="absolute bottom-4 right-4 bg-white p-2 shadow-lg rounded-md flex items-center">
+              <span class="text-primary-blue font-bold">✔️</span>
+              <p class="ml-2 text-sm">Flexible Hiring</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-6 text-center">
+    <div class="container mx-auto px-4">
+      <p class="text-sm md:text-base">© 2023 Innov8 Solutions Pty Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showTab(tab) {
+      const tabs = ['staffing', 'consulting', 'solutions'];
+      const buttons = {
+        staffing: document.getElementById('btn-staffing'),
+        consulting: document.getElementById('btn-consulting'),
+        solutions: document.getElementById('btn-solutions'),
+      };
+  
+      tabs.forEach(id => {
+        const content = document.getElementById(id);
+        content.classList.add('hidden');
+        buttons[id].classList.remove('bg-primary-blue', 'text-white');
+        buttons[id].classList.add('text-gray-700');
+      });
+  
+      const selected = document.getElementById(tab);
+      selected.classList.remove('hidden');
+      buttons[tab].classList.add('bg-primary-blue', 'text-white');
+      buttons[tab].classList.remove('text-gray-700');
+    }
+  
+    window.onload = function () {
+      showTab('staffing');
+    };
+  </script>
+</body>
+</html>

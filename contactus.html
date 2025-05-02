@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 flex flex-col items-center min-h-screen">
+  
+  <header class="bg-gradient-to-r from-black/70 via-gray-900/70 to-black/70 text-white shadow-lg py-4 md:py-0 px-4 md:px-8 sticky top-0 z-50 backdrop-blur-md">
+    <div class="container mx-auto flex items-center justify-between">
+        <img src="https://res.cloudinary.com/dqmf1kxtw/image/upload/v1743261147/logosa_jcfkng.png" alt="Innov8 Solutions Logo" style="height: 100px;">
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-yellow-300">Home</a></li>
+          <li><a href="domain.html" class="hover:text-yellow-300">Domain</a></li>
+          <li><a href="services.html" class="hover:text-yellow-300">Services</a></li>
+          <li><a href="technologies.html" class="hover:text-yellow-300">Technologies</a></li>
+          <li><a href="casestudies.html" class="hover:text-yellow-300">Case Studies</a></li>
+          <li><a href="staffingsolutions.html" class="hover:text-yellow-300">Staffing Solutions</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-300">Testimonials</a></li>
+          <li><a href="contactus.html" class="hover:text-yellow-300">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="w-full max-w-sm bg-teal-100 p-6 rounded-lg shadow-md transform transition-transform hover:-translate-y-1 mt-10">
+    <h3 class="text-teal-700 text-lg font-semibold text-center mb-4">We'd Love to Hear From You!</h3>
+    
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-2 mb-2 border border-teal-300 rounded focus:outline-none focus:border-teal-700">
+      <div class="text-red-500 text-sm mb-2" id="nameError"></div>
+
+      <input type="email" id="email" placeholder="Your Email" class="w-full p-2 mb-2 border border-teal-300 rounded focus:outline-none focus:border-teal-700">
+      <div class="text-red-500 text-sm mb-2" id="emailError"></div>
+
+      <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-2 mb-2 border border-teal-300 rounded focus:outline-none focus:border-teal-700"></textarea>
+      <div class="text-red-500 text-sm mb-2" id="messageError"></div>
+
+      <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-700 transition">Send Message</button>
+    </form>
+    
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      document.getElementById('nameError').textContent = '';
+      document.getElementById('emailError').textContent = '';
+      document.getElementById('messageError').textContent = '';
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      let hasError = false;
+
+      if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required!';
+        hasError = true;
+      }
+      if (email === '' || !email.includes('@')) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email!';
+        hasError = true;
+      }
+      if (message === '') {
+        document.getElementById('messageError').textContent = 'Message cannot be empty!';
+        hasError = true;
+      }
+
+      if (!hasError) {
+        alert('Thank you for reaching out! We will get back to you soon.');
+        document.getElementById('contactForm').reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
